@@ -1,0 +1,6 @@
+# 检查间隔（tick）
+check-interval: 100
+# 检测半径（方块）
+radius: 3.0
+# 最大允许的周围掉落物数量
+max-items: 10

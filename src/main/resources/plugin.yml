@@ -1,0 +1,8 @@
+name: Dropinfo
+main: vip.lanxing.mingxuan.dropinfo.Dropinfo
+authors: [ vip.lanxing.mingxuan ]
+version: "1.0.0-SNAPSHOT"
+description: "显示掉落物的插件"
+website: "https://www.lanxing.vip"
+api-version: 1.13
+folia-supported: true
