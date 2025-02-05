@@ -1,8 +1,16 @@
 name: Dropinfo
+version: 1.0.1
 main: vip.lanxing.mingxuan.dropinfo.Dropinfo
-authors: [ vip.lanxing.mingxuan ]
-version: "1.0.0-SNAPSHOT"
-description: "显示掉落物的插件"
-website: "https://www.lanxing.vip"
-api-version: 1.13
+api-version: 1.21
 folia-supported: true
+description: Display item names for dropped entities with Folia support
+authors:
+  - Lanxing
+commands:
+  dropinfo:
+    description: Reload plugin configuration
+    aliases: [di]
+permissions:
+  dropinfo.reload:
+    description: Allows reloading the plugin
+    default: op

@@ -22,19 +22,13 @@ public class DropListener implements Listener {
 
         ItemStack stack = item.getItemStack();
         String translateKey = getTranslateKey(stack.getType());
-        Component name = Component.translatable(translateKey);
-
-        // 仅在物品可堆叠时显示数量
-        if (stack.getMaxStackSize() > 1) {
-            name = name.append(Component.text(" [x" + stack.getAmount() + "]"));
-        }
-
-        name = name.decoration(TextDecoration.ITALIC, false);
+        Component name = Component.translatable(translateKey)
+                .decoration(TextDecoration.ITALIC, false);
 
         item.customName(name);
         item.setCustomNameVisible(true);
 
-        // Folia 兼容的定时任务
+        // Folia-compatible scheduler
         item.getScheduler().runAtFixedRate(plugin, task -> {
             if (item.isDead()) {
                 task.cancel();
